@@ -44,6 +44,6 @@ reuse_copy_attn: 'true'
 bridge: 'true'
 
 
-export CUDA_VISIBLE_DEVICES=0,1
+
 world_size: 2
 gpu_ranks: 1
