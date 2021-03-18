@@ -1,0 +1,47 @@
+save_data: ./data/javadata/java
+data:
+    java:
+        path_src: ./data/javadata/src-train.txt
+        path_tgt: ./data/javadata/tgt-train.txt
+    valid:
+        path_src: ./data/javadata/src-val.txt
+        path_tgt: ./data/javadata/tgt-val.txt
+
+both_embeddings: ./glove_dir/glove.6B.300d.txt
+embeddings_type: "GloVe"
+word_vec_size: 300
+
+src_vocab: data/javadata/java.vocab.src
+tgt_vocab: data/javadata/java.vocab.tgt
+src_vocab_size: 70000
+tgt_vocab_size: 50000
+
+save_model: models/java
+save_checkpoint_steps: 5000
+seed: 3435
+train_steps: 200000
+valid_steps: 5000
+report_every: 100
+
+encoder_type: brnn
+word_vec_size: 300 
+rnn_size: 500
+layers: 2 
+
+optim: adagrad
+learning_rate: 0.1
+adagrad_accumulator_init: 0.1
+max_grad_norm: 2
+
+batch_size: 64 
+valid_batch_size: 64
+dropout: 0.0
+
+copy_attn: 'true'
+coverage_attn: 'true'
+global_attention: mlp
+reuse_copy_attn: 'true'
+bridge: 'true'
+
+world_size: 1 
+gpu_ranks: 0
