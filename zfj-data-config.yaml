@@ -46,4 +46,4 @@ bridge: 'true'
 
 
 world_size: 2
-gpu_ranks: 1
+gpu_ranks: 0
